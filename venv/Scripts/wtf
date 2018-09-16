@@ -1,0 +1,5 @@
+#!G:\bp_porj\pulses\venv\Scripts\python.exe
+from pywtf import wtf
+
+if __name__ == '__main__':
+    wtf.main()
