@@ -11,7 +11,7 @@ import wavelet
 cur_dir = os.getcwd()
 os.chdir(cur_dir)
 
-fileName = "50ms3.txt"
+fileName = "50ms.txt"
 
 data = pd.read_table(fileName,sep='CRLF',names=['raw'],engine='python')
 row = data.shape[0]
