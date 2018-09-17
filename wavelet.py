@@ -50,7 +50,14 @@ def plot_signal_decomp(data, w, title):
         ax.set_xlim(0, len(y) - 1)
         ax.set_ylabel("D%d" % (i + 1))
 
-    temp = a_data[3-1] + a_data[4-1]
+    lenn = len(a_data[3])
+    if len(a_data[3]) > len(a_data[2]):
+        lenn = len(a_data[2])
+
+    temp = np.arange(lenn)
+    for i in range(lenn):
+        temp[i] = a_data[3][i] + a_data[2][i]
+
     plt.figure()
     plt.plot(temp, 'g')
     plt.show()
