@@ -36,7 +36,7 @@ def plot_signal_decomp(data, w, title):
     ax_main.set_title(title)
     ax_main.plot(data)
     ax_main.set_xlim(0, len(data) - 1)
-
+    a_data = []
     for i, y in enumerate(rec_a):
         ax = fig.add_subplot(len(rec_a) + 1, 2, 3 + i * 2)
         ax.plot(y, 'r')
@@ -44,11 +44,15 @@ def plot_signal_decomp(data, w, title):
         ax.set_ylabel("A%d" % (i + 1))
 
     for i, y in enumerate(rec_d):
+        a_data.append(y)
         ax = fig.add_subplot(len(rec_d) + 1, 2, 4 + i * 2)
         ax.plot(y, 'g')
         ax.set_xlim(0, len(y) - 1)
         ax.set_ylabel("D%d" % (i + 1))
 
+    temp = a_data[3-1] + a_data[4-1]
+    plt.figure()
+    plt.plot(temp, 'g')
     plt.show()
 
 
