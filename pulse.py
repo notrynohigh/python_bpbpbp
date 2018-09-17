@@ -11,7 +11,7 @@ import wavelet
 cur_dir = os.getcwd()
 os.chdir(cur_dir)
 
-fileName = "1.txt"
+fileName = "50ms3.txt"
 
 data = pd.read_table(fileName,sep='CRLF',names=['raw'],engine='python')
 row = data.shape[0]
@@ -29,4 +29,4 @@ pyplot.legend("P",loc="upper left")
 pyplot.axhline(0,linestyle=":",color="g")
 pyplot.show()
 
-wavelet.plot_signal_decomp(data.pressure,'db1', "blood pressure")
+wavelet.plot_signal_decomp(data.pressure,'db5', "blood pressure")
